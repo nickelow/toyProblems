@@ -5,7 +5,6 @@ function houseRobber(nums) {
     results[1] = nums[1] > nums[0] ? nums[1] : nums[0];
     for(var i = 2; i < nums.length; i++){
       var newTotal = nums[i] + results[i -2]
-      console.log(newTotal, nums[i], nums[i-2])
       if( newTotal > results[i-1]){
         results[i] = newTotal
       } else {
